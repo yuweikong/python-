@@ -1,0 +1,24 @@
+def chick(s):
+    s = str(s)
+    return s[::-1] == s
+def sum(s):
+    sum = 0
+    s = str(s)
+    for i in s:
+        i = int(i)
+        sum+=i
+    return sum
+n = input()
+n = int(n)
+ss=[]
+for i in range(10,1000000):
+    if chick(i):
+        ss.append(i)
+
+for index in ss:
+    fuck = index
+    sumof=sum(index)
+    sumof=int(sumof)
+    if (sumof == n ):
+        print(fuck)
+

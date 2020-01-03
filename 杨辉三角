@@ -1,0 +1,24 @@
+def triangles():
+    L = [1]
+    while True:
+        yield L
+        M = L[:]
+        M.append(0)
+        L = [M[i-1]+M[i] for i in range(len(M))]
+n = input()
+n = int(n)
+sm = 0
+result = []
+for trian in triangles():
+    result.append(trian)
+    sm += 1
+    if n == sm:
+        break
+for i in result:
+    i = str(i)
+    sum = 0
+    for s in range(len(i)):
+        s = int(s)
+        sum+=s
+    averages = int(sum/len(i))
+    print(i[averages])
